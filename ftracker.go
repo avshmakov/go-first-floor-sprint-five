@@ -82,7 +82,6 @@ const (
 func RunningSpentCalories(action int, weight, duration float64) float64 {
 	// ваш код здесь
 	return ((runningCaloriesMeanSpeedMultiplier * meanSpeed(action, duration) * runningCaloriesMeanSpeedShift) * weight / mInKm * duration * minInH)
-	//return 1
 }
 
 // Константы для расчета калорий, расходуемых при ходьбе.
@@ -102,7 +101,6 @@ const (
 func WalkingSpentCalories(action int, duration, weight, height float64) float64 {
 	// ваш код здесь
 	return ((walkingCaloriesWeightMultiplier*weight + (pow(meanSpeed(action, duration), 2)/height)*walkingSpeedHeightMultiplier*weight) * duration * minInH)
-	//return 2
 }
 
 // Константы для расчета калорий, расходуемых при плавании.
